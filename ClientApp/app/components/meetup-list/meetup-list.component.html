@@ -1,0 +1,20 @@
+﻿<h1>Meetups Summary</h1>
+
+<div class="panel panel-default panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Active MeetUps</h3>
+    </div>
+    <div class="panel-body">
+        <p *ngIf="!activeMeetups">No Active Meetups</p>
+        <meetup-summary *ngFor ="let meetup of activeMeetups" [meetupSummary]="meetup"></meetup-summary>
+    </div>
+</div>
+<div class="panel panel-default panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Attended MeetUps</h3>
+    </div>
+    <div class="panel-body">
+        <p *ngIf="!attendedMeetups">No Attended Meetups</p>
+        <meetup-summary *ngFor ="let meetup of attendedMeetups" [meetupSummary]="meetup"></meetup-summary>
+    </div>
+</div>
